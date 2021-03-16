@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SwiperOptions } from 'swiper';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-banner',
@@ -14,6 +14,8 @@ export class BannerComponent implements OnInit {
     '/assets/images/banner-3.jpg',
   ];
 
+  
+  
   constructor() { }
 
   ngOnInit(): void {

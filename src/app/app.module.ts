@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 import {SwiperModule} from 'swiper/angular';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {SwiperModule} from 'swiper/angular';
     DemoComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent
+    BannerComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
