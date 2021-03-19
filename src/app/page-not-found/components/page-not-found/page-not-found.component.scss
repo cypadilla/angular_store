@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 .container{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr) !important;
     // grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     background-color: #0D3089;
     .image-container{
@@ -17,11 +17,11 @@
 
     .content{
         padding-top: 120px;
-        h3{
-            font-family: 'Press Start 2P', cursive; 
+        h3{ 
             color: white;
             font-size: 60px;
-            padding-left: 10px;
+            padding-left: 10px !important;
+            margin-top: 60px;
         }
         a{
             text-decoration: none;
