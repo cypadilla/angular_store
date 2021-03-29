@@ -1,7 +1,9 @@
 <div class="product-grid">
     <app-product
-    *ngFor="let product of products"
+    *ngFor="let product of products; let i = index"
     (productClicked)="clickProduct($event)" 
-    [product]="product">
+    [product]="product"> 
     </app-product>
+
+    
   </div>    
