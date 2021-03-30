@@ -1,11 +1,13 @@
-.container{
-    border: blue 5px solid;
+.container_contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #B2B1B3;
 }
 
 .contact{
-    border: red 5px solid;
+    
 }
 
 .form{
-    border:green 5px solid;
+    
 }
