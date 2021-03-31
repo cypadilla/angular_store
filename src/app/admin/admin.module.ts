@@ -20,10 +20,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { FormProductComponent } from './components/form-product/form-product.component';
 
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, ListProductsComponent, DashboardComponent],
+  declarations: [ProductFormComponent, NavComponent, ListProductsComponent, DashboardComponent, FormProductComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
