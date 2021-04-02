@@ -9,6 +9,7 @@ import {
      DoCheck, 
      OnDestroy
     } from '@angular/core';
+import { CartService } from 'src/app/core/services/cart.service';
 
 import {Product} from '../../../product.model';
 @Component({
@@ -24,7 +25,7 @@ export class ProductComponent implements DoCheck, OnInit,OnDestroy{
 
   today = new Date;
   
-  constructor(){
+  constructor(private cartService:CartService){
       console.log('1.se ejecuto el constructor')
   }
 
@@ -34,11 +35,11 @@ export class ProductComponent implements DoCheck, OnInit,OnDestroy{
 //   }
 
   ngOnInit(){
-      console.log('3.ngOnInit')
+      // console.log('3.ngOnInit')
   }
 
   ngDoCheck(){
-    console.log('DOcheck')
+    // console.log('DOcheck')
   }
     
   ngOnDestroy(){
@@ -46,6 +47,7 @@ export class ProductComponent implements DoCheck, OnInit,OnDestroy{
   }
   addCart(): void{
     console.log('añadido al carrito');
-    this.productClicked.emit(this.product.id);
+    this.cartService.addCart(this.product)
+    // this.productClicked.emit(this.product.id);
     }
 }

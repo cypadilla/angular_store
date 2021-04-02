@@ -22,6 +22,9 @@ const routes: Routes = [
       {
         path:'demo',canActivate:[AdminGuard],loadChildren:()=>import('./demo/demo.module').then(m =>m.DemoModule)
       },
+      {
+        path:'order', loadChildren:()=>import('./order/order.module').then(m=>m.OrderModule)
+      }
     ]
   },
   {

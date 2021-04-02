@@ -24,7 +24,7 @@
     <th mat-header-cell *matHeaderCellDef style="text-align: center;">Actions</th>
     <td mat-cell *matCellDef="let product" class="center">
       <button mat-button>
-        <mat-icon color="primary">create</mat-icon>
+        <mat-icon color="primary" [routerLink]="['edit',product.id]">create</mat-icon>
       </button>
       <button mat-button (click)="deleteProducts(product.id)">
         <mat-icon color="warn">

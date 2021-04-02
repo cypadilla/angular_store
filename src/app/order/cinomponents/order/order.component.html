@@ -1,0 +1,43 @@
+<mat-horizontal-stepper>
+    <mat-step>
+        <div *ngIf="(products$ | async) as products" class="container_table">
+            <ng-template matStepLabel>Sus Productos</ng-template>
+            <p *ngIf="products.length === 0">No hay productos agregados al carrito</p>
+            <!-- <ul>
+                <li *ngFor="let product of products">
+                    {{product.title}} Total productos {{product | group}}
+                </li>
+            </ul> -->
+            <table *ngIf="products.length > 0" mat-table [dataSource]="products" class="mat-elevation-z8 full-width-table products-table">
+                <ng-container matColumnDef="title">
+                    <th mat-header-cell *matHeaderCellDef>Title</th>
+                    <td mat-cell *matCellDef="let product"> {{product.title}} </td>
+                </ng-container>
+                <ng-container matColumnDef="image">
+                    <th mat-header-cell *matHeaderCellDef></th>
+                    <td mat-cell *matCellDef="let product">
+                            <img  class="center" mat-card-image [src]="product.image" alt="imagen del producto ">
+                    </td>
+                </ng-container>
+                <ng-container matColumnDef="total">
+                    <th mat-header-cell *matHeaderCellDef>Total</th>
+                    <td mat-cell *matCellDef="let product"> {{product | group}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+
+        </div>
+    </mat-step>
+    <mat-step>      
+        <ng-template matStepLabel>Datos personales</ng-template>
+        <form>
+            <!-- <mat-content></mat-content> -->
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Pago</ng-template>
+        <h1>Contenido</h1>
+    </mat-step>
+</mat-horizontal-stepper>

@@ -9,13 +9,15 @@ import { ExponentialPipe } from './../shared/pipes/exponential/exponential.pipe'
 import { HighlightDirective } from './../shared/directives/highlight/highlight.directive';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
+import { GroupPipe } from './pipes/group/group.pipe';
 
 @NgModule({
   declarations: [
     ExponentialPipe,
     HighlightDirective,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    GroupPipe
   ],
   imports: [
     CommonModule,
@@ -28,6 +30,7 @@ import { MaterialModule } from '../material/material.module';
     HighlightDirective,
     HeaderComponent,
     FooterComponent,
+    GroupPipe
   ]
 })
 export class SharedModule { }
