@@ -15,7 +15,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 })
 export class OrderComponent implements OnInit {
 
-  displayedColumns: string[] = ['title','image', 'total'];
+  displayedColumns: string[] = ['title','image', 'total','delete'];
 
   products$: Observable<Product[]>;
 
@@ -27,6 +27,11 @@ export class OrderComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  deleteProduct(product:Product){
+    // console.log('Eliminando Producto',product);
+    console.log(this.cartService.cart$)
   }
 
 }
